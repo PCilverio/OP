@@ -22,5 +22,6 @@ function initGraph() {
     v6.addNeighbor(v4);
     v6.addNeighbor(v7);
     bfs(v1);
+    //dfs(v1);
 }
 initGraph();
