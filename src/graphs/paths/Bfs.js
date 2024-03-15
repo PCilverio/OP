@@ -6,7 +6,7 @@ const bfs = (source) => {
     const vertexLine = [];
     vertexLine.push(source);
     while (!isEmpty(vertexLine)) {
-        const firstVertex = vertexLine.pop();
+        const firstVertex = vertexLine.shift();
         firstVertex.print();
         firstVertex.getVertexList().forEach(vertex => {
             if (!vertex.getVisited()) {

@@ -6,14 +6,13 @@ const dfs = (source) => {
     const vertexLine = [];
     vertexLine.push(source);
     while (!isEmpty(vertexLine)) {
-        const firstVertex = vertexLine.shift();
-        firstVertex.print();
-        firstVertex.getVertexList().forEach(vertex => {
+        const fVertex = vertexLine.pop();
+        fVertex.print();
+        fVertex.getVertexList().forEach(vertex => {
             if (!vertex.getVisited()) {
                 vertex.setVisited(true);
                 vertexLine.push(vertex);
             }
-            
         });
     }
 }
